@@ -1,0 +1,66 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    background: linear-gradient(#DECBA4, #3E5151);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.back, .front {
+    position: absolute;
+    transition: all ease-in-out 1s;
+    backface-visibility: hidden;
+}
+
+img {
+    width: 250px;
+    height: 350px;
+    border-radius: 5%;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(180deg);
+}
+
+.card:hover .front {
+    transform: rotateY(360deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+    /*animation-name: rotate;*/
+    /*animation-delay: 2s;*/
+    /*animation-iteration-count: infinite;*/
+
+
+/*@keyframes rotate {*/
+/*from {transform: rotateY(180deg)}*/
+/*    to {transform: rotateY(360deg)}*/
+/*}*/
